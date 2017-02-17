@@ -1,9 +1,9 @@
 # CS 558 Network Security 
 ## Scribe Notes Spring 2017
 
-To post scribe notes, go to the `notes` folder and create a pull request.
+To post scribe notes, go to the `_posts` folder and create a pull request.
 
-This can easily be done from the browser by going to the [notes](notes/) folder and clicking `Create new file` in the upper right.
+This can easily be done from the browser by going to the [_posts](_posts/) folder and clicking `Create new file` in the upper right.
 
 ### Instructions
 1. Name your file `YYYY-MM-DD-title.md` for example `2017-02-15-RSA.md`
@@ -12,14 +12,18 @@ This can easily be done from the browser by going to the [notes](notes/) folder 
 
 	```
 	---
-	layout: post
+	layout: notes
 	title: RSA Security 
 	scribe: Your Name
 	---
+
+	Notes go here...
 	```
 
 4. When you're done write a commit message and click `Propose new file`
 5. Drop a star for your favorite TA 😎
+
+See an example [here](https://raw.githubusercontent.com/asamborski/cs558_s17_notes/master/_posts/2017-02-17-welcome-to-jekyll.md)
 
 ### Preview files locally
 
