@@ -23,7 +23,21 @@ This can easily be done from the browser by going to the [_posts](_posts/) folde
 4. When you're done write a commit message and click `Propose new file`
 5. Drop a star for your favorite TA 😎
 
-See an example [here](https://raw.githubusercontent.com/asamborski/cs558_s17_notes/master/_posts/2017-02-17-welcome-to-jekyll.md)
+See an example [here](_posts/2017-01-19-Logistics.md)
+
+### Including Images
+
+Inline images can be easily included
+
+Instructions:
+
+1. Upload image to `img/` folder
+2. Reference image in markdown 
+
+```
+![alt text](img/name_of_img.jpg "Title")
+```
+
 
 ### Preview files locally
 
