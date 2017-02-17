@@ -10,9 +10,6 @@ github_username: asamborski
 piazza_link: https://piazza.com/class/iwxvspg1o217
 github_link: https://github.com/asamborski/cs558_s17_notes#cs-558-network-security
 
-# Change location of posts to notes
-notes: notes
-
 # Build settings
 markdown: kramdown
 theme: minima
