@@ -23,7 +23,7 @@ This can easily be done from the browser by going to the [_posts](_posts/) folde
 4. When you're done write a commit message and click `Propose new file`
 5. Drop a star for your favorite TA 😎
 
-See an example [here](_posts/2017-01-19-Logistics.md)
+See an example [here](https://raw.githubusercontent.com/asamborski/cs558_s17_notes/master/_posts/2017-01-19-Logistics.md)
 
 ### Including Images
 
