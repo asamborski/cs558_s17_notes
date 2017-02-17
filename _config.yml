@@ -1,0 +1,16 @@
+title: CS558 Network Security
+description: > # this means to ignore newlines until "baseurl:"
+  Scribe notes from the Spring 2017 section of CS558 Network Security
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  asamborksi
+piazza_link: https://piazza.com/class/iwxvspg1o217
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
