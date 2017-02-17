@@ -12,6 +12,7 @@ This can easily be done from the browser by going to the [notes](notes/) folder 
 
 	```
 	---
+	layout: post
 	title: RSA Security 
 	scribe: Your Name
 	---
@@ -20,4 +21,10 @@ This can easily be done from the browser by going to the [notes](notes/) folder 
 4. When you're done write a commit message and click `Propose new file`
 5. Drop a star for your favorite TA 😎
 
+### Preview files locally
 
+If you want to preview your notes locally you'll need to install [jekyll](https://jekyllrb.com/)
+
+Then just run:
+
+	jekyll serve
