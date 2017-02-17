@@ -1,10 +1,17 @@
+# CS 558 Network Security Notes
 title: CS558 Network Security
 description: > # this means to ignore newlines until "baseurl:"
   Scribe notes from the Spring 2017 section of CS558 Network Security
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  asamborksi
+github_username: asamborski
+
+# Links in Upper Right
 piazza_link: https://piazza.com/class/iwxvspg1o217
+github_link: https://github.com/asamborski/cs558_s17_notes#cs-558-network-security
+
+# Change location of posts to notes
+notes: notes
 
 # Build settings
 markdown: kramdown
