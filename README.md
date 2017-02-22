@@ -35,7 +35,7 @@ Instructions:
 2. Reference image in markdown 
 
 ```
-![alt text]({ site.url }}/img/name_of_img.jpg "Title")
+![alt text]({{ site.url }}/img/name_of_img.jpg "Title")
 ```
 
 
