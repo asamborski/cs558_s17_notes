@@ -72,3 +72,7 @@ RSAGen() = p,q,e
 d = e-1 mod (p-1)(q-1)
 Keep Secret: d, p, q
 Make Public: e, N
+
+
+* [Notes 1]({{ site.url }}/notes/2-16-17.pdf)
+* [Notes 2]({{ site.url }}/notes/2-16-17-2.pdf)
