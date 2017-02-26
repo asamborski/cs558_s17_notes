@@ -76,3 +76,4 @@ Make Public: e, N
 
 * [Notes 1]({{ site.url }}/notes/2-16-17.pdf)
 * [Notes 2]({{ site.url }}/notes/2-16-17-2.pdf)
+* [Notes 3]({{ site.url }}/notes/2-16-17-3.pdf)
