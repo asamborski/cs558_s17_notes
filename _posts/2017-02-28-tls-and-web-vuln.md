@@ -90,6 +90,7 @@ ________________________________________________________________________________
 			* Due to the hardness of the discrete log
 3. The server chooses a generator **g** and a random **a**, and computes **g^a**, sending **g**, **g^a** and (**g, g^a, cr, and sr**) signed with the key of **SK_F**
 4. The server also sends over its certificate Cert(PK_F), which for example, could be multi-layered as such:
+
 ```
  ________________________________ 
 |     Certificate 2              |
@@ -116,6 +117,7 @@ ________________________________________________________________________________
 |________________________________|
 
 ```
+
 * The client then uses the root store and certificate chain to:
     * Verify cert2 with PK_G_long, obtain PK_G_short
     * Verify cert1 with PK_G_short, obtain PK_F
