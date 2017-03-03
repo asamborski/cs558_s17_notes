@@ -39,6 +39,7 @@ scribe: Luke Osborne
 ----
   * **TLS** - Encrypted Protocol
   * **HTTP**- Webpage protocol (actual messages being passed)
+
 ```
   +--------------+
   | Key Exchange |
@@ -66,6 +67,7 @@ HTTPS 	<--> 	TLS
 ----
   * Attacker can send, eavesdrop, and modify
   * Model assumed by cryptographers
+
 ```
   +----------+                    +----------+
   |          |-------+------+---->|          |
@@ -79,6 +81,7 @@ HTTPS 	<--> 	TLS
   * Attacker can eavesdrop, but not modify traffic or drop traffic.
   * For example, someone sniffing on a network.
   * Attacker can send separate messages to Alice or Bob from different box
+
 ```
   +----------+                     +----------+
   |          |-------------------->|          |
@@ -98,11 +101,13 @@ HTTPS 	<--> 	TLS
 				  +----------+
 
 ```
+
 ### Off-Path
 ----
   * Model assumed by web security
   * No eavesdropping capability
   * Only able to send messages
+
 ```
   +----------+                     +----------+
   |          |-------------------->|          |
@@ -122,6 +127,7 @@ HTTPS 	<--> 	TLS
 ## URLs
 ----
   * Global identifiers of network-retrievable documents
+
 ```
   URL: http://bu.edu:81/class?name=cs558#homework
 
@@ -129,6 +135,7 @@ HTTPS 	<--> 	TLS
   |   http://  |   bu.edu   | :81  | /class? | name=cs558 | #homework  |
   +--------------------------------------------------------------------+
 ```
+
   * Special characters are encoded as hex
 
 ## HTTP
@@ -136,6 +143,7 @@ HTTPS 	<--> 	TLS
 ----
 #### How to see (Firefox):
   * Right-click -> inspect element -> network -> reload -> choose packet -> headers -> Raw Headers -> Request Headers
+
 ```
 GET /index.html HTTP/1.1
 Accept: image/gif, image/x-bitmap, image/jpeg, */*
@@ -147,6 +155,7 @@ Referer: http://www.google.com?q=dingbats
 (BLANK LINE)
 (DATA, NONE FOR GET)
 ```
+
 ```
 +==============+=============+
 | Method       |  GET        |
@@ -158,6 +167,7 @@ Referer: http://www.google.com?q=dingbats
 | Headers      | */*         |
 +--------------+-------------+
 ```
+
   * GET: No side effect
   * POST: Possible side effect
 
@@ -184,6 +194,7 @@ Cache-Control: max-age=0
 #### Old Style HTML:
 ----
   * Mostly text markup
+
 ```html
 <html>
   <body>
@@ -193,10 +204,12 @@ Cache-Control: max-age=0
   </body>
 </html>
 ```
+
 #### New Style HTML:
 ----
   * More dynamic
   * Uses JavaScript to execute code in browser
+
 ```javascript
 var list = document.getElementByID("t1");
 var rewrite = document.createElement("1");
@@ -206,9 +219,11 @@ var rewrite = document.createElement("1");
 ### HTML Image Tags and Vulnerabilities
 ----
 An image tag in an HTML page, like:
+
 ```html
 <img src = "http://notthesamewebsite.com/information_can_be_passed_here">
 ```
+
 can be used to force a user to visit another web server when loading a page.
 
 This can be used to track users (single pixel images), or pass information, for example in an XSS (cross-site-scripting) attack (covered later).
@@ -216,7 +231,9 @@ This can be used to track users (single pixel images), or pass information, for 
 ## Cookies
   * Cookies are used to store a state on the user's machine.
   * They are needed because servers are generally stateless.
+
 ```
+
   +---------+     POST                  +---------+
   |         |-------------------------->|         |
   | Browser |                           | Server  |
@@ -240,6 +257,7 @@ This can be used to track users (single pixel images), or pass information, for 
 ### Cookie Authentication
 ----
 ```
+
   +---------+ POST login.cgi       +---------+   Validate user      +---------+
   | Browser |--------------------->|  Web    |--------------------->|  Auth   |
   |         | username&pwd         | Server  |                      | Server  |
@@ -258,6 +276,7 @@ This can be used to track users (single pixel images), or pass information, for 
   |         | restricted.html      |         |       YES/NO         |         |
   +---------+                      +---------+                      +---------+
 ```
+
 ### Secure Cookies
 ----
   * Browser will only seend cookie back over HTTPS
