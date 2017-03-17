@@ -1,0 +1,64 @@
+---
+layout: notes
+title: CFAA
+scribe: Benny Guan
+---
+
+# Presentation: Swift Attack
+1. Swift is an international organization that allows secure banking transactions through a messaging service
+2. An unknown organization attempted to steal 951 million with 81 million actually being stolen
+3. 3 additional attacks were detected in June 2016
+4. Swift setup 16 mandatory security measures for partnership banks such that if they failed to pass a measure they would not be allowed to conduct buisness using swift.
+
+## Attack Strategy
+## How Swift works
+1. A local bank would contact a national bank to conduct a transaction.
+2. The national bank would create a swift message, send it the oversea's bank who would verify the message.
+3. The oversea's bank would send a swift acknowledgment back to the national bank.
+4. The national bank would queue the swift message in a queue until processing time
+5. The transaction would then go through and the funds would transfer to the recipient bank
+
+## The attack
+1. A malware/ modified dll file was installed in the oversea's bank computer
+2. This would make it so the swift message would always be authenticated and go to the swift aliance database ( which sends it to the queue)
+3. The attacker would then directly send the message to the swift aliance database, thus bypassing any message authentication or human checking, as it would not send a return message to the bank.
+4. The message would be sent to the queue and processed.
+
+They speculate this was possible due to old hardware and old software that needed security patches, this attack was only found due to a typo spotted by a swift operator who looked at the transaction. To this day the 81 million has not been found.
+
+They speculate that the malware is traced back to the group: Lazarus.
+
+
+----------
+
+# CFAA (Computer Fraud and Abuse Act)
+
+ 1. Created in 1982-1983
+ 2. The movie "wargames" helped bring about the creation of the CFAA
+ 3. Roots of the CFAA (1970's)
+ 4.  Theft Crimes: taking/using data that is not one's own property including copying said data
+	- Fraud Crime: impersonating as someone else in order to gain access to data
+	- Trespass crimes: accessing data sets or data that one does not have permission to access.
+ 5. CFAA today (simplified and main points):
+	 - one cannot obtain info/data related to the creation of nuclear weapons or information that would harm the US
+	 - one cannot obtain info/data that one does not have access to
+	 - one cannot commit fraud with computers
+	 - one cannot cause damage to a computer one does not have permission to access
+
+### Legal Jargon:
+
+ - Intentionally: Outcome is why your doing it
+ - Knowingly: You are aware that this will be your outcome
+ - Recklessly: Disregarding the risks/consequences of your actions
+ - Negligence: A reasonable person will know this action will occur as a result
+ - Strict Liability: No matter the intent, you are liable and held responsible for your actions 
+ - Protected Computer: 
+	 - Computer: smartphone, smatwatch, smartTV, etc, but not a hand-held calculator among other things
+	 - Protected: exclusive rights and use by the US for affecting foreign commerce and communication
+ - Damage: impairment to the integrity of availability of data   
+ - Loss: monetary/non-monetary value loss
+ 
+However the CFAA is still relatively new, and many, many cases still fall within a gray area that would need to be dealt with on a per-trial basis.
+
+ 
+	
