@@ -41,8 +41,17 @@ Instructions:
 
 ### Preview files locally
 
-If you want to preview your notes locally you'll need to install [jekyll](https://jekyllrb.com/)
-
-Then just run:
+If you want to preview your notes locally you'll need to install [jekyll](https://jekyllrb.com/).
+Then, just run:
 
 	jekyll serve
+	
+	
+#### For Ubuntu:
+You will also need to install ruby version >= 2.0.0 and any dependencies that come up.
+
+Then, from the main directory of the repository, just run:
+
+	 bundle exec jekyll serve
+	
+It will tell you which address to go to in your browser to preview the page (default is http://localhost:4000).
