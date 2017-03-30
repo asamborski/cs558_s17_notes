@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: March 23, 2017: BugDrop; Pegasus; Cookies, XSS, and CSRF 
+title: "March 23, 2017: BugDrop; Pegasus; Cookies, XSS, and CSRF"
 scribe: Daniel Valentine
 ---
 

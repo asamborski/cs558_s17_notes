@@ -1,8 +1,9 @@
 ---
 layout: notes
-title: Guest Lecture: Computer Fraud and Abuse Act
-Scribe : Shahrez Jan
+title: Computer Fraud and Abuse Act
+scribe: Shahrez Jan
 ---
+
 ## Class Presentation: Swift Attack on Bangladesh Bank:
 
 #### Swift
