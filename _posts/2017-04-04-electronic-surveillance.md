@@ -57,7 +57,7 @@ author: Kristel Tan
 
 * US persons’ communications can naturally flow abroad
 
-![alt text](https://www.washingtonpost.com/world/national-security/nsa-infiltrates-links-to-yahoo-google-data-centers-worldwide-snowden-documents-say/2013/10/30/e51d661e-4166-11e3-8b74-d89d714ca4dd_story.html?utm_term=.133bd4f77383 "NSA Presentation on Google Cloud Exploitation")
+!["NSA Presentation on Google Cloud Exploitation"](https://www.washingtonpost.com/world/national-security/nsa-infiltrates-links-to-yahoo-google-data-centers-worldwide-snowden-documents-say/2013/10/30/e51d661e-4166-11e3-8b74-d89d714ca4dd_story.html?utm_term=.133bd4f77383)
 
 * What if the same info is collected under FISA & EO 12333?
   * If I could have collected this data in the US, but collected it outside, what laws apply?
