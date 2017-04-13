@@ -8,10 +8,10 @@ scribe: Chloe Fortuna
 
 ## TLS Packet
 [![https://gyazo.com/7f750b4af0a56c17c022ac652614d121](https://i.gyazo.com/7f750b4af0a56c17c022ac652614d121.png)](https://gyazo.com/7f750b4af0a56c17c022ac652614d121)
-The TLS packet contains 3 main layers:
-- **IP Header:** Contains information for the IP layer. This section is not encrypted.
-- **TCP layer:** Contains information for the TCP layer. This section is also not encrypted.
-- **TLS layer**: Contains encrypted information, the MAC address, and padding.
+- The TLS packet contains 3 main layers:
+    - **IP Header:** Contains information for the IP layer. This section is not encrypted.
+    - **TCP layer:** Contains information for the TCP layer. This section is also not encrypted.
+    - **TLS layer**: Contains encrypted information, the MAC address, and padding.
 
 ### Metadata is still leaked in TLS
 - Data that is not encrypted and is leaked:
