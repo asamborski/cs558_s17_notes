@@ -25,14 +25,8 @@ The TLS packet contains 3 main layers:
         - Certain protocols always send packets at specific lengths.
 - Leaked metadata has zero protection under the law. All metadata is exposed and the government can look at it.
 - The actual conversation isn't leaked because it is encrypted, but information such as using Gmail is exposed.
-
-
-TLS: end-to-end encryption from sender to receiver
-TCP: controls the pipe connecting the sender to the receiver
-
-
-
-
+- **TLS:** end-to-end encryption from sender to receiver
+- **TCP:** controls the pipe connecting the sender to the receiver
 
 ## TCP (Transmission Control Protocol)
 - In TCP, data is transferred through packets which arrive in order, and for each packet received, an acknowledgement is given.
@@ -89,7 +83,7 @@ Computers have:
 A form of networking roll call:
 - **ARP Request:** "Who has this IP address?" is broadcasted to everyone
 - **ARP Reply:** A computer responses with: "I have that IP address. Here is my MAC address."
-**For example:** Asking for a printer's IP address.
+- **For example:** Asking for a printer's IP address.
 
 #### ARP Poisoning/Spoofing
 - When the ARP request is broadcasted to everyone, anyone can answer.
