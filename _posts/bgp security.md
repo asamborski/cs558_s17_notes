@@ -12,8 +12,6 @@ Let's look at the July '13 manipulation closely.
 
 ![](imgs/20170414-213256.png)
 
-*Image Credit*: Prof. Goldberg's slides
-
 Here, the endpoint in Atrato network wanted to send some data over the internet to some endpoint in Qwest/Centurylink network. The endpoint in Atrato and the endpoint in Qwest had connection to transfer data directly. However, as explained in the picture, the data travelled through a network named Siminn in Iceland. This happened because of BGP manipulation.
 
 In BGP, a router can announce which IP addresses fall into their control and network. Each of the network have an ID associated with it. For example, in the picture, Siminn network's ID is AS 6677. BU's ID is AS 111. BU was one of the earlier to adopt internet. Hence, they got a pretty small ID number, 111.
@@ -95,3 +93,5 @@ A router may speak BGPSec to one neighbour network and BGP to another neighbour 
 2) Cheap (through Siminn)
 
 It has been widely surveyed and reported that most of the networks will choose the cheapest route in most cases. Prof. Goldberg has personally investigated as well. Most network does choose the cheapest route. Therefore, the previous attack might still work.
+
+*All Image Credit*: Prof. Goldberg's slides
