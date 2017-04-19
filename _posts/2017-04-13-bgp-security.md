@@ -14,7 +14,7 @@ Renesys, an internet routing monitoring firm, found that some data from Denver c
 
 Let's look at the July '13 manipulation closely.
 
-![](imgs/20170414-213256.png)
+![](https://github.com/asamborski/cs558_s17_notes/blob/master/_posts/imgs/20170414-213256.png?raw=true)
 
 Here, the endpoint in Atrato network wanted to send some data over the internet to some endpoint in Qwest/Centurylink network. The endpoint in Atrato and the endpoint in Qwest had connection to transfer data directly. However, as explained in the picture, the data travelled through a network named Siminn in Iceland. This happened because of BGP manipulation.
 
@@ -24,18 +24,18 @@ A router generally announce the IPs fall into their control by providing a list 
 
 By following BGP announcement, a network can channel a packet destined for some network. The networks need to follow other network's BGP announcements. By following the announcements, a packet can find it path to reach the destination IP address. However, the problem is that anyone can announce BGP.
 
-###What happened in July '13?
+### What happened in July '13?
 Please follow the above picture. The Siminn network (AS 6677) announced that it could route the packet to the destination IP address from Atrato, for those IPs which follow under 206.51.69.0/24 . This is a subset of the IP addresses which fall under the network of Qwsest (AS 22561). Beceause of BGP's particular design of choosing more specific range over less specific ones, Atrato chose Siminn to route the packets for the destination IPs in the range of 206.51.69.0/24 . It is important to note that 206.51.69.0/24 is more specific than 206.51.69.0/19 because the earlier is a subset of the former one.
 
 It is also important to realize that Siminn only broadcasted its 206.51.69.0/24 subset of addresses to be under its control only to Atrato. Not to Cogent (AS 174). Otherwise, Cogent would have also sent all the packets destined for 206.51.69.0/24 ranged of IP addresses to Siminn. Then, Siminn could have converted into a **blackhole**. Because, it could have not found any route to those range of IP addresses, but all those packets destined for 206.51.69.0/24 range of IP addresses would come to Siminn.
 
 Till now, nobody knows who actually carried out this and what the motive was. Renesys discovered this. They monitor this kind of traffic and report when something strage is noticed.
 
-###How can we prevent this kind of manipulation/attack?
+### How can we prevent this kind of manipulation/attack?
 
 We have to secure routing. 
 
-![](imgs/20170414-220122.png)
+![](https://github.com/asamborski/cs558_s17_notes/blob/master/_posts/imgs/20170414-220122.png)
 
 If we look at the above picture, left is less secure, and the ideal would be to go to the right. **R**esource **P**ublic **K**ey **I**nfrastracture (RPKI) is kind of a middleground.
 
@@ -43,25 +43,25 @@ It is very expensive in terms of timing cost to do cryptographic computation on 
 
 There are five authorities which issue IP addresses in different parts of the world. They issue certificates to the networks under them. This is not the same certificates as given for individual websites by the CAs which have been discussed previously. Till now, RPKI is deployed in 6% of the Internet. BGPSec is the most secure protocol known. But it is far from getting standardized, let alone being deployed.
 
-###How does RPKI work?
+### How does RPKI work?
 There is a Route Origin Authorisation (ROA) object is given to each network. Please refer to the slides by Prof. Goldberg for the pictures related to this. A ROA object looks like the following:
  
 |-----206.51.64.0/19-----|
 |----------AS 22561--------|
 
-This just says that the range 206.51.64.0/19 belongs to AS 22561. Now, whenever a network tries to route some data, it checks the announcement of a neighbouring network to match with the ROA from RPKI system. Any address which falls into the address block with a correct ROA, then those network is announcing valid range. With this kind of arrangement and system, the previous attack goes away.
+This just says that the range `206.51.64.0/19` belongs to AS 22561. Now, whenever a network tries to route some data, it checks the announcement of a neighbouring network to match with the ROA from RPKI system. Any address which falls into the address block with a correct ROA, then those network is announcing valid range. With this kind of arrangement and system, the previous attack goes away.
 
-####How can the previous attack come back?
+#### How can the previous attack come back?
 **Foreign-origin attack:**
 Anyone can forge to be someone else. Then, the previous attack can still be carried out.
 
 Also, there might be some other parameters involved in chosing the right network. For example, in the first picture above, AS 6677 might allow open peering. Therefore, AS 6677 allows anyone to use its network for data-transfer. On the contrary, AS 22561 and Atrato might have a business relationship among them. AS 22561 might charge some dollars to Atrato to transfer data. To avoid extra cost, Atrato might choose to deliver through AS 6677. Cost might decide a forge path which AS 6677 may claim to have.
 
-###Why is Digital Signature needed?
+### Why is Digital Signature needed?
 
 Digital Signature can ensure every path is signed. We can also use MAC to verify. However, MAC is very costly. In TLSm there's handshake in TCP. Then, keys are established and exchange starts. But in BGP, there's not so much time for doing all these. There may need to be n^2^ keys needed. All of these can make routing very slow.
 
-##BGPSec
+## BGPSec
 BGPSec is secure. Every network has a key here.
 Let's go back to the very first picture. AS 22561 signs the following with its key:
 **AS 174: (AS 22561, *prefix*)**
@@ -83,10 +83,10 @@ However, Siminn or AS 6677 doesn't have that. Therefore, it cannot intercept. AS
 
 It is important to note that the verification happens in multiple layers in all the network. For example, AS 174 verifies whatever it gets from its neighbour such as AS 22561.
 
-####Limitation
+#### Limitation
 BGPSec cannot prevent **collusion attack**. In this type of attack, two networks consult and manipulate network traffic. For example, AS 22561 can sign with its own key for the traffic to be transferred through AS 6677. Then, AS 6677 will be able to intercept traffic from Atrato.
 
-####Overheads
+#### Overheads
 Matching the public keys is a very big overhead in this protocol. Routers also need to have all the public keys stored into the system. Many levels of verification of signature are also needed. Therefore, this is very costly. This protocol is far from standardized. Prof. Goldberg has almost no hope of it being deployed any time soon.
 
 ### How can we still carry out the previous attack of July '13?
