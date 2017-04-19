@@ -1,4 +1,8 @@
-#Security of BGP
+---
+layout: notes
+title: "Security of BGP"
+scribe: Soham Sinha
+---
 
 BGP is **B**order **G**ateway **P**rotocol. It is used to exchange routing information. It is mainly used in routers and gateways. It allows connection between large networks.
 
