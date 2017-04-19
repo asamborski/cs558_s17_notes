@@ -35,7 +35,7 @@ Till now, nobody knows who actually carried out this and what the motive was. Re
 
 We have to secure routing. 
 
-![](https://github.com/asamborski/cs558_s17_notes/blob/master/_posts/imgs/20170414-220122.png)
+![](https://github.com/asamborski/cs558_s17_notes/blob/master/_posts/imgs/20170414-220122.png?raw=true)
 
 If we look at the above picture, left is less secure, and the ideal would be to go to the right. **R**esource **P**ublic **K**ey **I**nfrastracture (RPKI) is kind of a middleground.
 
@@ -46,8 +46,8 @@ There are five authorities which issue IP addresses in different parts of the wo
 ### How does RPKI work?
 There is a Route Origin Authorisation (ROA) object is given to each network. Please refer to the slides by Prof. Goldberg for the pictures related to this. A ROA object looks like the following:
  
-|-----206.51.64.0/19-----|
-|----------AS 22561--------|
+ |-----206.51.64.0/19-----|
+ |----------AS 22561--------|
 
 This just says that the range `206.51.64.0/19` belongs to AS 22561. Now, whenever a network tries to route some data, it checks the announcement of a neighbouring network to match with the ROA from RPKI system. Any address which falls into the address block with a correct ROA, then those network is announcing valid range. With this kind of arrangement and system, the previous attack goes away.
 
