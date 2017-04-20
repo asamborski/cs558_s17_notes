@@ -3,6 +3,7 @@ layout: notes
 title: BGP-Routing 
 scribe: Aswin Vasudevan
 ---
+
 Scribe Notes 
 Dated : 04/13/2017
 Submitted by : Aswin Vasudevan
