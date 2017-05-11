@@ -1,4 +1,8 @@
-Notes from 25/04/17 by Benjamin Li
+---
+layout: notes
+title:  "DNS with Reyzin"
+scribe: Benjamin Li
+---
 
 Defensive and Offensive DNS Tactics
 
