@@ -3,6 +3,7 @@ layout: notes
 title: Internet Weaknesses 
 scribe: Tyrone Hou
 ---
+
 # April 6th notes
 
 ## Internet weaknesses

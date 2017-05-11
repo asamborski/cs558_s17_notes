@@ -3,6 +3,7 @@ layout: notes
 title: web hacking ii 
 scribe: Molly Shopper
 ---
+
 # web hacking ii: cookies, SOP, XSS, and CSRF
 
 ## Cookies
